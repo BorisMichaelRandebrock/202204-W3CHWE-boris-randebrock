@@ -18,32 +18,23 @@ class Card extends Component {
               class="pokemon__picture card-img-top"
             />
             <div class="card-body">
- <h2 class="pokemon__name card-title h4">${pokemon.id} <br> </h2>   
-            <h2 class="pokemon__name card-title h4">${pokemon.name} <br> </h2>
-  <h2 class="pokemon__name card-title h4">${pokemon.types[0].type.name} <br> </h2>
-   
-      <h2 class="pokemon__name card-title h4">${pokemon.sprites} <br> </h2>
+              <h2 class="pokemon__name card-title">${pokemon.id} </h2>   
+              <p >${pokemon.name} </p>
+              <p class="pokemon__name card-title">${pokemon.types[0].type.name} </p>
+              <p class="pokemon__name card-title">${pokemon.sprites} </p>
               <div class="pokemon__info">
                 <ul class="list-unstyled">
-                 
-                  <li>
-                  
-                  </li>
                 </ul>
               </div>
               <div class="pokemon__overlay">
                 <ul class="list-unstyled">
-                 
                 </ul>
                 <div class="pokemon__actions">
-                  <button class="pokemon__action btn">habla</button>
-                  <button class="pokemon__action btn">muere</button>
                 </div>
               </div>
             </div>
             <i class="emoji"></i>
-          </div>
-       
+          </div>       
       `;
   }
 
