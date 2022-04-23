@@ -14,14 +14,16 @@ class Card extends Component {
           <div class="card pokemon__card">
             <img
               src="${pokemon.sprites.other.home.front_default}"
-              alt=""
+              alt="${pokemon.name}"
+              width="250"
+              height="250"
               class="pokemon__picture card-img-top"
             />
             <div class="card-body">
-              <h2 class="pokemon__name card-title">${pokemon.id} </h2>   
-              <p >${pokemon.name} </p>
-              <p class="pokemon__name card-title">${pokemon.types[0].type.name} </p>
-              <p class="pokemon__name card-title">${pokemon.sprites} </p>
+              <p class="pokemon__name card-title">Pokemon id: ${pokemon.id} </p>   
+              <p >Pokemon name: ${pokemon.name} </p>
+              <p class="pokemon__name card-title">Pokemon type: ${pokemon.types[0].type.name} </p>
+              <p class="pokemon__name card-title"></p>
               <div class="pokemon__info">
                 <ul class="list-unstyled">
                 </ul>
