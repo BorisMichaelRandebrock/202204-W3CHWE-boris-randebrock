@@ -1,4 +1,4 @@
-import Card from "./components-js/Card.js";
+import PokemonListComponent from "./components-js/AppComponent/PokemonListComponent.js";
 
-const { body } = document;
-new Card(body, "li", "pokemon_li");
+const app = document.querySelector(".app");
+new PokemonListComponent(app);

@@ -1,7 +1,7 @@
 class Component {
   element;
 
-  constructor(parent, tag, className) {
+  constructor(parent, className, tag) {
     this.element = document.createElement(tag);
     this.element.className = className;
     parent.append(this.element);

@@ -1,29 +1,28 @@
 import Component from "./Component.js";
-import pokemon from "../getPokemon.js";
 
-class Card extends Component {
+class PokemonComponent extends Component {
   pokemon;
-  constructor(parent, tag, className) {
-    super(parent, "li", className);
+  constructor(parent, pokemon) {
+    super(parent, "col", "li");
+    this.pokemon = pokemon;
     this.render();
-    this.element = pokemon;
   }
 
   render() {
     this.element.innerHTML = `
           <div class="card pokemon__card">
             <img
-              src="${pokemon.sprites.other.home.front_default}"
-              alt="${pokemon.name}"
-              width="250"
-              height="250"
+              src="${this.pokemon.sprites.other.home.front_default}"
+              alt="${this.pokemon.name}"
+              width="200"      
               class="pokemon__picture card-img-top"
             />
             <div class="card-body">
-              <p class="pokemon__name card-title">Pokemon id: ${pokemon.id} </p>   
-              <p >Pokemon name: ${pokemon.name} </p>
-              <p class="pokemon__name card-title">Pokemon type: ${pokemon.types[0].type.name} </p>
-              <p class="pokemon__name card-title"></p>
+              <p class="pokemon__name card-title">Pokemon id: ${this.pokemon.id} </p>   
+              <p >Pokemon name: ${this.pokemon.name} </p>
+              <p class="pokemon__name card-title">Pokemon type: ${this.pokemon.types[0].type.name} </p>
+              <p class="pokemon__name card-title">Pokemons height: ${this.pokemon.height} </p>
+              <p class="pokemon__name card-title">Pokemons weight: ${this.pokemon.weight} </p>
               <div class="pokemon__info">
                 <ul class="list-unstyled">
                 </ul>
@@ -49,4 +48,4 @@ class Card extends Component {
   }
 }
 
-export default Card;
+export default PokemonComponent;
